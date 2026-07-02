@@ -61,3 +61,12 @@ Desktop.ini
 .cache/
 .turbo/
 .vercel
+
+# ===========================
+# Agent Skills & Temp Files
+# ===========================
+.agents/
+skills-lock.json
+create-tables*.js
+sql-exec*.js
+*.sql
