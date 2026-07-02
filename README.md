@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=34&duration=3000&pause=1000&color=00FF99&center=true&vCenter=true&width=900&lines=🌍+CarbonMind+AI;⚡+AI-Powered+Carbon+Footprint+Tracker;🌱+Track+•+Analyze+•+Reduce+Your+CO₂+Impact;🤖+Gemini+AI+Climate+Coach" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=34&duration=3000&pause=1000&color=00FF99&center=true&vCenter=true&width=900&lines=%F0%9F%8C%8D%20CarbonMind%20AI;%E2%9A%A1%20AI-Powered%20Carbon%20Footprint%20Tracker;%F0%9F%8C%B1%20Track%20%E2%80%A2%20Analyze%20%E2%80%A2%20Reduce%20Your%20CO%E2%82%82%20Impact;%F0%9F%A4%96%20Gemini%20AI%20Climate%20Coach" alt="CarbonMind AI Typing Animation" />
 
 <br/>
 
