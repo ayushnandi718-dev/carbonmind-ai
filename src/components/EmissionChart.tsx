@@ -8,8 +8,9 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
-  TooltipProps,
 } from "recharts";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type TooltipPayload = any;
 import { supabase } from "@/lib/supabase";
 
 interface EmissionChartProps {
@@ -17,7 +18,7 @@ interface EmissionChartProps {
   total: number;
 }
 
-function CustomTooltip({ active, payload, label }: TooltipProps<number, string>) {
+function CustomTooltip({ active, payload, label }: { active?: boolean; payload?: TooltipPayload; label?: string | number }) {
   if (active && payload && payload.length) {
     return (
       <div
@@ -107,7 +108,7 @@ export default function EmissionChart({ userId, total }: EmissionChartProps) {
           tickLine={false}
         />
 
-        <Tooltip content={<CustomTooltip />} />
+        <Tooltip content={CustomTooltip} />
 
         <Area
           type="monotone"

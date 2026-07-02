@@ -11,7 +11,7 @@ import { supabase, DbUser } from "@/lib/supabase";
 import { getDeviceId } from "@/lib/device";
 import { calcTotalEmission, calcCarbonScore } from "@/lib/emissions";
 import { awardEligibleBadges } from "@/lib/useBadges";
-import { BadgeDef } from "@/lib/badges";
+import { BadgeDef, getBadgeDef } from "@/lib/badges";
 
 export type UserData = {
   id: string;
@@ -296,13 +296,13 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       goalMetThisWeek: !!activeGoal && totalEmission <= activeGoal.target_emission,
       profileCount: profiles.length || 1,
       isFirstSave,
-      flights: profile.flights,
-      totalEmission,
-      nationalAvgEmission: 70,
     });
 
     if (newBadges.length > 0 && newBadgeCallbackRef.current) {
-      newBadges.forEach((b) => newBadgeCallbackRef.current?.(b));
+      newBadges.forEach((key) => {
+        const badge = getBadgeDef(key);
+        if (badge) newBadgeCallbackRef.current?.(badge);
+      });
     }
   }
 

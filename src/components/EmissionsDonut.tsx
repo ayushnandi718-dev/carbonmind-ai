@@ -6,12 +6,12 @@ import {
   Cell,
   Tooltip,
   ResponsiveContainer,
-  TooltipProps,
 } from "recharts";
 import { useUser } from "@/context/UserContext";
 import { calcTotalEmission } from "@/lib/emissions";
 
-function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function CustomTooltip({ active, payload }: { active?: boolean; payload?: any }) {
   if (active && payload && payload.length) {
     return (
       <div
@@ -78,7 +78,7 @@ export default function EmissionsDonut() {
                 <Cell key={index} fill={entry.color} />
               ))}
             </Pie>
-            <Tooltip content={<CustomTooltip />} />
+            <Tooltip content={CustomTooltip} />
           </PieChart>
         </ResponsiveContainer>
       </div>

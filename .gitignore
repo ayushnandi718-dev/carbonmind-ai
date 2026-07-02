@@ -60,3 +60,4 @@ Desktop.ini
 # ===========================
 .cache/
 .turbo/
+.vercel
