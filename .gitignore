@@ -70,3 +70,5 @@ skills-lock.json
 create-tables*.js
 sql-exec*.js
 *.sql
+
+# temp
